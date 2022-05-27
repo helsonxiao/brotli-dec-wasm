@@ -5,7 +5,8 @@
   "scripts": {
     "pretest": "bash tests/pretest.sh",
     "test": "bash tests/test.sh",
-    "build": "wasm-pack build --out-name index"
+    "build": "wasm-pack build --out-name index",
+    "build:web": "wasm-pack build --target web"
   },
   "repository": {
     "type": "git",
@@ -33,5 +34,8 @@
   "module": "pkg/index.js",
   "exports": "./pkg/index.js",
   "types": "pkg/index.d.ts",
-  "sideEffects": false
+  "sideEffects": false,
+  "devDependencies": {
+    "wasm-pack": "^0.10.2"
+  }
 }
